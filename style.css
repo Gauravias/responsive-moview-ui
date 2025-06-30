@@ -1,0 +1,822 @@
+ /* Custom CSS to override/extend Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0E0F11; /* Dark background as per image */
+            color: #E0E0E0; /* Light text color */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll for the whole page */
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Top Navigation Bar */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FFB300; /* Orange color for logo */
+        }
+
+        .nav-links ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #A0A0A0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-icon {
+            font-size: 1.2rem;
+            color: #A0A0A0;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .nav-icon:hover {
+            color: #fff;
+        }
+
+        .login-button { /* New style for login button */
+            background-color: #FFB300;
+            color: #0E0F11;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Ensure it looks like a button */
+            white-space: nowrap;
+        }
+
+        .login-button:hover {
+            background-color: #FFC14D;
+        }
+
+        /* Hamburger Menu Icon (Mobile) */
+        .hamburger-menu {
+            display: none; /* Hidden by default on larger screens */
+            font-size: 1.5rem;
+            color: #FFB300;
+            cursor: pointer;
+            z-index: 1001; /* Ensure it's above other content */
+        }
+
+        /* Hero Section (Breaking Bad) */
+        .hero-section {
+            display: flex;
+            flex-direction: row; /* Default for larger screens */
+            align-items: flex-start;
+            gap: 30px;
+            padding: 40px 0;
+            background-image: url('https://placehold.co/1200x600/1a1a1a/ffffff?text=Breaking+Bad+Poster'); /* Placeholder for main poster */
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden; /* For overlay */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Overlay for hero section image */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(14, 15, 17, 0.9) 0%, rgba(14, 15, 17, 0.6) 50%, rgba(14, 15, 17, 0.2) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            flex: 2; /* Takes more space on the left */
+            padding: 40px;
+            max-width: 600px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .hero-details {
+            font-size: 1rem;
+            color: #A0A0A0;
+            margin-bottom: 20px;
+        }
+
+        .hero-imdb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .imdb-logo {
+            background-color: #FFB300;
+            color: #0E0F11;
+            font-weight: 700;
+            padding: 5px 8px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+
+        .imdb-rating {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .play-button {
+            background-color: #FFB300;
+            color: #0E0F11;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .play-button:hover {
+            background-color: #FFC14D;
+            transform: scale(1.05);
+        }
+
+        /* Season Slider */
+        .season-slider-wrapper {
+            position: relative;
+            z-index: 2;
+            flex: 1; /* Takes less space on the right initially */
+            max-width: 500px; /* Limit width of slider area */
+            padding-top: 40px; /* Align with hero content top */
+            padding-right: 20px; /* Space from right edge */
+        }
+
+        .season-slider {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto; /* Enable horizontal scrolling */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+            -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+            padding-bottom: 15px; /* Space for hidden scrollbar */
+            scroll-snap-type: x mandatory; /* Snap items into view */
+        }
+
+        .season-slider::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+        }
+
+        .season-card {
+            flex-shrink: 0; /* Prevent cards from shrinking */
+            width: 180px; /* Fixed width for each card */
+            background-color: #1A1C1F; /* Card background */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease;
+            scroll-snap-align: start; /* Snap to start of card */
+        }
+
+        .season-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .season-card-image {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .season-card-content {
+            padding: 15px;
+        }
+
+        .season-card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .season-card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #A0A0A0;
+            margin-top: 10px;
+        }
+
+        .season-card-price {
+            background-color: #FFB300;
+            color: #0E0F11;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        .season-card-price.free {
+            background-color: #28A745; /* Green for free */
+            color: #fff;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            margin-left: -20px; /* Adjust to align with slider if needed */
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #404040;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #FFB300;
+        }
+
+        /* Search/Filter Bar */
+        .filter-section {
+            background-color: #1A1C1F;
+            padding: 25px;
+            border-radius: 15px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-end;
+            margin-bottom: 40px;
+        }
+
+        .filter-group {
+            flex: 1;
+        }
+
+        .filter-label {
+            font-size: 0.85rem;
+            color: #A0A0A0;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .filter-input, .filter-select {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 10px;
+            background-color: #2D2F35;
+            border: 1px solid #404040;
+            color: #E0E0E0;
+            font-size: 1rem;
+            outline: none;
+            appearance: none; /* Remove default arrow for select */
+        }
+
+        .filter-input::placeholder {
+            color: #707070;
+        }
+
+        .filter-select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 18px;
+        }
+
+        .filter-button {
+            background-color: #FFB300;
+            color: #0E0F11;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            white-space: nowrap; /* Prevent button text from wrapping */
+        }
+
+        .filter-button:hover {
+            background-color: #FFC14D;
+        }
+
+        /* Hot & New Section */
+        .hot-new-section {
+            margin-bottom: 40px; /* Add margin for spacing before blogs */
+        }
+
+        .hot-new-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .hot-new-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .see-more {
+            color: #FFB300;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            cursor: pointer; /* Indicate clickable */
+        }
+
+        .see-more:hover {
+            color: #FFC14D;
+        }
+
+        .hot-new-content-wrapper {
+            max-height: 600px; /* Show approx 2 rows initially (2*280px poster + 2*15px padding + gaps) */
+            overflow-y: hidden;
+            transition: max-height 0.5s ease-out; /* Smooth transition for expand/collapse */
+            position: relative; /* For the gradient effect */
+        }
+
+        .hot-new-content-wrapper.expanded {
+            max-height: fit-content; /* Show all content */
+            overflow-y: visible;
+        }
+
+        /* Gradient overlay for "Show More" effect */
+        .hot-new-content-wrapper::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px; /* Height of the gradient fade */
+            background: linear-gradient(to top, #0E0F11 0%, rgba(14, 15, 17, 0) 100%);
+            pointer-events: none; /* Allow clicks through the gradient */
+            transition: opacity 0.3s ease-in;
+        }
+
+        .hot-new-content-wrapper.expanded::after {
+            opacity: 0; /* Hide gradient when expanded */
+        }
+
+        .hot-new-slider {
+            display: flex;
+            flex-wrap: wrap; /* Allow cards to wrap to next line */
+            gap: 20px; /* Gap between cards */
+            padding-bottom: 15px; /* Ensure space at bottom */
+        }
+
+        .movie-card {
+            flex-shrink: 0;
+            /* Calculate width to fit 5 cards per row on larger screens */
+            width: calc((100% - 4 * 20px) / 5); /* 5 cards + 4 gaps */
+            background-color: #1A1C1F;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .movie-card-poster {
+            width: 100%;
+            height: 280px; /* Aspect ratio for movie posters */
+            object-fit: cover;
+        }
+
+        .movie-card-info {
+            padding: 15px;
+        }
+
+        .movie-card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 5px;
+            white-space: normal; /* Allow text to wrap within the card */
+            overflow: hidden;
+            text-overflow: ellipsis; /* For overflow on a single line if needed */
+        }
+
+        .movie-card-genre {
+            font-size: 0.85rem;
+            color: #A0A0A0;
+        }
+
+        .show-more-button {
+            display: block;
+            width: 100%;
+            background-color: #2D2F35;
+            color: #FFB300;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 30px; /* Space from cards above */
+            border: none;
+        }
+
+        .show-more-button:hover {
+            background-color: #3A3D43;
+            color: #FFC14D;
+        }
+
+        /* Movie Blogs Section */
+        .movie-blogs-section {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .movie-blogs-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .movie-blogs-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px;
+        }
+
+        .blog-card {
+            background-color: #1A1C1F;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card-large {
+            grid-column: span 1; /* Default large on desktop */
+        }
+
+        .blog-card-large img {
+            width: 100%;
+            height: 300px; /* Larger image height for main blog */
+            object-fit: cover;
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 180px; /* Smaller image height for other blogs */
+            object-fit: cover;
+        }
+
+        .blog-card-content {
+            padding: 15px;
+        }
+
+        .blog-card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .blog-card-description {
+            font-size: 0.9rem;
+            color: #A0A0A0;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Limit text to 3 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 10px;
+        }
+
+        .blog-card-meta {
+            font-size: 0.8rem;
+            color: #707070;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1A1C1F;
+            padding: 40px 0;
+            text-align: center;
+            color: #A0A0A0;
+            font-size: 0.9rem;
+            margin-top: 40px;
+            border-top: 1px solid #2D2F35;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .footer-links a {
+            color: #A0A0A0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .social-icons {
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: #A0A0A0;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #FFB300;
+        }
+
+
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .hero-section {
+                flex-direction: column; /* Stack content vertically */
+                align-items: center;
+                padding: 30px;
+                background-position: top center; /* Adjust background for stacking */
+            }
+
+            .hero-section::before {
+                background: linear-gradient(to bottom, rgba(14, 15, 17, 0.9) 0%, rgba(14, 15, 17, 0.6) 50%, rgba(14, 15, 17, 0.2) 100%);
+            }
+
+            .hero-content {
+                text-align: center;
+                max-width: 100%;
+                padding: 0; /* Adjust padding for mobile */
+            }
+
+            .play-button {
+                margin: 20px auto; /* Center play button */
+            }
+
+            .season-slider-wrapper {
+                max-width: 100%; /* Slider takes full width */
+                padding-top: 20px;
+                padding-left: 20px; /* Add padding for scrolling visibility */
+                padding-right: 20px;
+            }
+
+            .season-slider {
+                justify-content: flex-start; /* Align items to start for scrolling */
+            }
+
+            .season-card {
+                width: 160px; /* Slightly smaller cards */
+                height: auto; /* Allow height to adjust */
+            }
+
+            .filter-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-group {
+                width: 100%;
+            }
+
+            .filter-button {
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            .nav-links ul {
+                gap: 15px;
+            }
+
+            .movie-card {
+                /* On tablets, show 3 cards per row */
+                width: calc((100% - 2 * 20px) / 3); /* 3 cards + 2 gaps */
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr; /* Single column for blogs on tablets */
+            }
+
+            .blog-card-large {
+                grid-column: span 1; /* Reset span for single column */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .season-card {
+                width: 140px; /* Even smaller cards on smaller tablets */
+            }
+
+            .movie-card {
+                /* On smaller tablets, show 2 cards per row */
+                width: calc((100% - 1 * 20px) / 2); /* 2 cards + 1 gap */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-left {
+                gap: 15px;
+            }
+            .nav-links {
+                display: none; /* Hide main navigation links on very small screens */
+            }
+            .nav-logo {
+                font-size: 1.2rem;
+            }
+            /* .user-profile is now .login-button */
+            .user-profile { /* Fallback, though it should be login-button */
+                padding: 5px 10px;
+            }
+            .user-name { /* Not applicable to login-button, but keep for safety */
+                display: none;
+            }
+
+            /* Show hamburger menu icon */
+            .hamburger-menu {
+                display: block; /* Show hamburger menu on mobile */
+            }
+
+            /* Mobile menu overlay */
+            .mobile-menu-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                z-index: 1000;
+                display: none; /* Hidden by default */
+            }
+
+            .mobile-menu-overlay.active {
+                display: block; /* Show when active */
+            }
+
+            .mobile-nav-links {
+                position: fixed;
+                top: 0;
+                right: -250px; /* Start off-screen */
+                width: 250px;
+                height: 100%;
+                background-color: #1A1C1F;
+                padding: 20px;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+                transition: right 0.3s ease-in-out;
+                z-index: 1002;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .mobile-nav-links.active {
+                right: 0; /* Slide in */
+            }
+
+            .mobile-nav-links a {
+                color: #E0E0E0;
+                text-decoration: none;
+                font-size: 1.1rem;
+                font-weight: 500;
+                padding: 10px 0;
+                border-bottom: 1px solid #2D2F35;
+            }
+
+            .mobile-nav-links a:last-child {
+                border-bottom: none;
+            }
+
+            .mobile-menu-close {
+                font-size: 1.8rem;
+                color: #FFB300;
+                cursor: pointer;
+                text-align: right;
+                margin-bottom: 20px;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-imdb {
+                justify-content: center; /* Center IMDb rating */
+            }
+
+            .season-slider-wrapper {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .season-card {
+                width: 120px; /* Smallest card size on phones */
+                height: auto;
+            }
+            .season-card-image {
+                height: 100px;
+            }
+            .season-card-title {
+                font-size: 0.9rem;
+            }
+            .season-card-meta {
+                font-size: 0.7rem;
+            }
+
+            .filter-section {
+                padding: 15px;
+            }
+
+            .hot-new-title {
+                font-size: 1.5rem;
+            }
+            .movie-card {
+                width: calc((100% - 20px) / 2); /* 2 cards per row on mobile */
+                margin-bottom: 20px; /* Add margin bottom for vertical spacing */
+            }
+            .movie-card-poster {
+                height: 220px;
+            }
+            .movie-card-title {
+                font-size: 1rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr; /* Single column for blogs on mobile */
+            }
+        }
+   

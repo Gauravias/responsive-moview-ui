@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Movie - UI Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+       </head>
+<body>
+    <div class="container">
+        <header class="top-nav">
+            <div class="nav-left">
+                <div class="nav-logo">GAURAV MOVIE</div>
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav class="nav-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">TV Shows</a></li>
+                        <li><a href="#">Genres</a></li>
+                        <li><a href="#">My List</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="nav-right">
+                <i class="fas fa-bell nav-icon"></i>
+                <a href="#" class="login-button">Login</a>
+            </div>
+        </header>
+
+        <div class="mobile-menu-overlay"></div>
+
+        <nav class="mobile-nav-links">
+            <div class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <a href="#">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Genres</a>
+            <a href="#">My List</a>
+        </nav>
+
+
+        <main class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Breaking Bad</h1>
+                <p class="hero-details">2008-2013</p>
+                <div class="hero-imdb">
+                    <span class="imdb-logo">IMDb</span>
+                    <span class="imdb-rating">9.8/10</span>
+                </div>
+                <div class="play-button">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+
+            <div class="season-slider-wrapper">
+                <div class="season-slider" id="seasonSlider">
+                    <div class="season-card">
+                        <img src="https://placehold.co/180x120/1a1c1f/ffffff?text=Season+1" alt="Breaking Bad Season 1" class="season-card-image">
+                        <div class="season-card-content">
+                            <h3 class="season-card-title">Breaking Bad Season 1</h3>
+                            <p class="season-card-details">7 Episodes</p>
+                            <div class="season-card-meta">
+                                <span>9.4/10</span>
+                                <span class="season-card-price free">Free</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="season-card">
+                        <img src="https://placehold.co/180x120/1a1c1f/ffffff?text=Season+2" alt="Breaking Bad Season 2" class="season-card-image">
+                        <div class="season-card-content">
+                            <h3 class="season-card-title">Breaking Bad Season 2</h3>
+                            <p class="season-card-details">13 Episodes</p>
+                            <div class="season-card-meta">
+                                <span>9.6/10</span>
+                                <span class="season-card-price">$24</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="season-card">
+                        <img src="https://placehold.co/180x120/1a1c1f/ffffff?text=Season+3" alt="Breaking Bad Season 3" class="season-card-image">
+                        <div class="season-card-content">
+                            <h3 class="season-card-title">Breaking Bad Season 3</h3>
+                            <p class="season-card-details">13 Episodes</p>
+                            <div class="season-card-meta">
+                                <span>9.6/10</span>
+                                <span class="season-card-price">$24</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="season-card">
+                        <img src="https://placehold.co/180x120/1a1c1f/ffffff?text=Season+4" alt="Breaking Bad Season 4" class="season-card-image">
+                        <div class="season-card-content">
+                            <h3 class="season-card-title">Breaking Bad Season 4</h3>
+                            <p class="season-card-details">13 Episodes</p>
+                            <div class="season-card-meta">
+                                <span>9.7/10</span>
+                                <span class="season-card-price">$24</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="season-card">
+                        <img src="https://placehold.co/180x120/1a1c1f/ffffff?text=Season+5" alt="Breaking Bad Season 5" class="season-card-image">
+                        <div class="season-card-content">
+                            <h3 class="season-card-title">Breaking Bad Season 5</h3>
+                            <p class="season-card-details">16 Episodes</p>
+                            <div class="season-card-meta">
+                                <span>9.8/10</span>
+                                <span class="season-card-price">$24</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="season-card">
+                        <img src="https://placehold.co/180x120/1a1c1f/ffffff?text=Season+6" alt="Breaking Bad Season 6" class="season-card-image">
+                        <div class="season-card-content">
+                            <h3 class="season-card-title">Breaking Bad Season 6</h3>
+                            <p class="season-card-details">16 Episodes</p>
+                            <div class="season-card-meta">
+                                <span>9.8/10</span>
+                                <span class="season-card-price">$24</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-dots" id="seasonSliderDots">
+                    </div>
+            </div>
+        </main>
+
+        <section class="filter-section">
+            <div class="filter-group">
+                <label for="search-input" class="filter-label">Search...</label>
+                <input type="text" id="search-input" class="filter-input" placeholder="Money Heist">
+            </div>
+            <div class="filter-group">
+                <label for="genre-select" class="filter-label">Genre</label>
+                <select id="genre-select" class="filter-select">
+                    <option value="">4 Selected</option>
+                    <option value="action">Action</option>
+                    <option value="drama">Drama</option>
+                    <option value="comedy">Comedy</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="channel-select" class="filter-label">Channel</label>
+                <select id="channel-select" class="filter-select">
+                    <option value="">Netflix</option>
+                    <option value="hbo">HBO</option>
+                    <option value="amazon">Amazon Prime</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="country-select" class="filter-label">Country</label>
+                <select id="country-select" class="filter-select">
+                    <option value="">USA</option>
+                    <option value="india">India</option>
+                    <option value="uk">UK</option>
+                </select>
+            </div>
+            <button class="filter-button">Search</button>
+        </section>
+
+        <section class="hot-new-section">
+            <div class="hot-new-header">
+                <h2 class="hot-new-title">Hot & New</h2>
+            </div>
+            <div class="hot-new-content-wrapper" id="hotNewContentWrapper">
+                <div class="hot-new-slider" id="hotNewSlider">
+                    <div class="movie-card">
+                        <img src="https://placehold.co/200x280/1a1c1f/ffffff?text=Movie+1" alt="Movie Poster 1" class="movie-card-poster">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">LIFE IS IN THEIR HANDS</h3>
+                            <p class="movie-card-genre">Drama</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://placehold.co/200x280/1a1c1f/ffffff?text=Movie+2" alt="Movie Poster 2" class="movie-card-poster">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">CHERNOBYL</h3>
+                            <p class="movie-card-genre">History, Drama</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://placehold.co/200x280/1a1c1f/ffffff?text=Movie+3" alt="Movie Poster 3" class="movie-card-poster">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">THE MIND'S EYE</h3>
+                            <p class="movie-card-genre">Sci-Fi, Thriller</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://placehold.co/200x280/1a1c1f/ffffff?text=Movie+4" alt="Movie Poster 4" class="movie-card-poster">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">INCEPTION</h3>
+                            <p class="movie-card-genre">Sci-Fi, Action</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://placehold.co/200x280/1a1c1f/ffffff?text=Movie+5" alt="Movie Poster 5" class="movie-card-poster">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">PARASITE</h3>
+                            <p class="movie-card-genre">Thriller, Comedy</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://placehold.co/200x280/1a1c1f/ffffff?text=Movie+6" alt="Movie Poster 6" class="movie-card-poster">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">SPIDER-MAN: INTO THE SPIDER-VERSE</h3>
+                            <p class="movie-card-genre">Animation, Action</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://placehold.co/200x280/1a1c1f/ffffff?text=Movie+7" alt="Movie Poster 7" class="movie-card-poster">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">THE GODFATHER</h3>
+                            <p class="movie-card-genre">Crime, Drama</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://placehold.co/200x280/1a1c1f/ffffff?text=Movie+8" alt="Movie Poster 8" class="movie-card-poster">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">PULP FICTION</h3>
+                            <p class="movie-card-genre">Crime, Drama</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://placehold.co/200x280/1a1c1f/ffffff?text=Movie+9" alt="Movie Poster 9" class="movie-card-poster">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">THE DARK KNIGHT</h3>
+                            <p class="movie-card-genre">Action, Crime</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://placehold.co/200x280/1a1c1f/ffffff?text=Movie+10" alt="Movie Poster 10" class="movie-card-poster">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">FORREST GUMP</h3>
+                            <p class="movie-card-genre">Drama, Romance</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://placehold.co/200x280/1a1c1f/ffffff?text=Movie+11" alt="Movie Poster 11" class="movie-card-poster">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">FIGHT CLUB</h3>
+                            <p class="movie-card-genre">Drama</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://placehold.co/200x280/1a1c1f/ffffff?text=Movie+12" alt="Movie Poster 12" class="movie-card-poster">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">THE MATRIX</h3>
+                            <p class="movie-card-genre">Sci-Fi, Action</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="show-more-button" id="toggleHotNew">See More</button>
+        </section>
+
+        <section class="movie-blogs-section">
+            <div class="movie-blogs-header">
+                <h2 class="movie-blogs-title">Movie Blogs</h2>
+                <a href="#" class="see-more">See More</a>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card blog-card-large">
+                    <img src="https://placehold.co/600x300/1a1c1f/ffffff?text=Super+Mario+Movie" alt="The Super Mario Bros Movie 2023" class="blog-card-image">
+                    <div class="blog-card-content">
+                        <h3 class="blog-card-title">The Super Mario Bros Movie 2025</h3>
+                        <p class="blog-card-description">Disney's upcoming "Frozen 3" is saying "Let it go" as it spoofs the second-biggest animated film history... (truncated for brevity)</p>
+                        <p class="blog-card-meta">2023 - Animation, Adventure</p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="https://placehold.co/300x180/1a1c1f/ffffff?text=Spider-Man" alt="Spider-Man: Across the Spider-Verse" class="blog-card-image">
+                    <div class="blog-card-content">
+                        <h3 class="blog-card-title">Spider-Man: Across the Spider-Verse</h3>
+                        <p class="blog-card-description">Miles Morales returns for the next chapter of the Oscar®-winning Spider-Verse saga, Spider-Man: Across the Spider-Verse...</p>
+                        <p class="blog-card-meta">2023 - Animation, Action</p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://placehold.co/300x180/1a1c1f/ffffff?text=Fast+X" alt="Fast X Global Box Office" class="blog-card-image">
+                    <div class="blog-card-content">
+                        <h3 class="blog-card-title">Fast X Global Box Office Crashes Past Another Huge Milestone</h3>
+                        <p class="blog-card-description">Fast X, starring Vin Diesel as Dom Toretto, is set to rev up the Box Office with its latest release, hitting...</p>
+                        <p class="blog-card-meta">2023 - Action, Thriller</p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://placehold.co/300x180/1a1c1f/ffffff?text=Guardians+3" alt="Guardians of the Galaxy Vol. 3" class="blog-card-image">
+                    <div class="blog-card-content">
+                        <h3 class="blog-card-title">Guardians of the Galaxy Vol. 3 in 2023 Summer</h3>
+                        <p class="blog-card-description">The beloved band of misfits continues their adventures in the cosmos, facing new dangers and old friends...</p>
+                        <p class="blog-card-meta">2023 - Sci-Fi, Adventure</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <p>&copy; 2023 Gaurav Movie. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Season Slider Infinite Scroll ---
+            const seasonSlider = document.getElementById('seasonSlider');
+            const seasonCardsOriginal = Array.from(seasonSlider.children); // Get original cards
+            const sliderDotsContainer = document.getElementById('seasonSliderDots');
+
+            if (seasonCardsOriginal.length === 0) return;
+
+            const numClones = seasonCardsOriginal.length; // Clone all cards for smoother infinite scroll
+
+            // Clone all original elements and append to end
+            seasonCardsOriginal.forEach(card => {
+                const clone = card.cloneNode(true);
+                clone.classList.add('cloned');
+                seasonSlider.appendChild(clone);
+            });
+
+            // Clone all original elements and prepend to beginning
+            for (let i = seasonCardsOriginal.length - 1; i >= 0; i--) {
+                const clone = seasonCardsOriginal[i].cloneNode(true);
+                clone.classList.add('cloned');
+                seasonSlider.prepend(clone);
+            }
+
+            // Recalculate seasonCards including clones
+            const allSeasonCards = Array.from(seasonSlider.children);
+
+            let isTransitioning = false;
+            let autoScrollInterval;
+            const scrollSpeed = 3000; // Time in ms for each scroll step
+
+            // Function to scroll to a specific index smoothly
+            const scrollToCard = (index, smooth = true) => {
+                const cardWidth = allSeasonCards[0].offsetWidth + 20; // card width + gap
+                const scrollLeft = index * cardWidth;
+                if (smooth) {
+                    seasonSlider.style.scrollBehavior = 'smooth';
+                } else {
+                    seasonSlider.style.scrollBehavior = 'auto';
+                }
+                seasonSlider.scrollLeft = scrollLeft;
+                // Update dots based on the "real" index
+                let realIndex = (index % seasonCardsOriginal.length + seasonCardsOriginal.length) % seasonCardsOriginal.length;
+                updateDots(realIndex);
+            };
+
+            // Reset position when hitting cloned ends
+            seasonSlider.addEventListener('scroll', () => {
+                if (isTransitioning) return;
+
+                const scrollLeft = seasonSlider.scrollLeft;
+                const cardWidth = allSeasonCards[0].offsetWidth + 20;
+
+                // If scrolled into the last set of clones, jump back to the equivalent original set
+                if (scrollLeft >= (seasonCardsOriginal.length + numClones - 1) * cardWidth - seasonSlider.clientWidth + 10) { // Approximation for end of real content
+                    isTransitioning = true;
+                    scrollToCard(numClones, false);
+                    setTimeout(() => { isTransitioning = false; }, 50);
+                }
+                // If scrolled into the first set of clones, jump forward to the equivalent original set
+                else if (scrollLeft <= (numClones - 1) * cardWidth && scrollLeft > 0) {
+                    isTransitioning = true;
+                    scrollToCard(seasonCardsOriginal.length + numClones -1 , false);
+                    setTimeout(() => { isTransitioning = false; }, 50);
+                }
+
+                // Update dots based on which "real" card is visible
+                let visibleCardIndex = Math.round(scrollLeft / cardWidth);
+                let realIndex = (visibleCardIndex - numClones + seasonCardsOriginal.length) % seasonCardsOriginal.length;
+                updateDots(realIndex);
+            });
+
+            // Initial scroll to show the "real" first card, avoiding prepended clones
+            scrollToCard(numClones, false);
+
+            // Auto-scroll functionality
+            const startAutoScroll = () => {
+                autoScrollInterval = setInterval(() => {
+                    if (!isTransitioning) {
+                        const cardWidth = allSeasonCards[0].offsetWidth + 20;
+                        const currentScrollLeft = seasonSlider.scrollLeft;
+                        const totalScrollWidth = seasonSlider.scrollWidth - seasonSlider.clientWidth;
+
+                        let targetScrollLeft = currentScrollLeft + cardWidth;
+
+                        // Check if we are at the end of the real content, if so, jump to start of real content
+                        if (targetScrollLeft >= (seasonCardsOriginal.length + numClones -1) * cardWidth - seasonSlider.clientWidth +10 ) {
+                             seasonSlider.style.scrollBehavior = 'auto'; // Disable smooth scroll for instant jump
+                             seasonSlider.scrollLeft = numClones * cardWidth; // Jump to the beginning of the original items
+                             targetScrollLeft = numClones * cardWidth + cardWidth; // Set target for next smooth scroll
+                             setTimeout(() => { seasonSlider.style.scrollBehavior = 'smooth'; }, 50); // Re-enable smooth scroll
+                        } else {
+                            seasonSlider.style.scrollBehavior = 'smooth';
+                        }
+                        seasonSlider.scrollLeft = targetScrollLeft;
+                    }
+                }, scrollSpeed);
+            };
+
+            const stopAutoScroll = () => {
+                clearInterval(autoScrollInterval);
+            };
+
+            // Start auto-scroll on page load
+            startAutoScroll();
+
+            // Pause auto-scroll on hover
+            seasonSlider.addEventListener('mouseenter', stopAutoScroll);
+            seasonSlider.addEventListener('mouseleave', startAutoScroll);
+
+
+            // Create and update dots
+            function createDots() {
+                sliderDotsContainer.innerHTML = ''; // Clear existing dots
+                for (let i = 0; i < seasonCardsOriginal.length; i++) {
+                    const dot = document.createElement('div');
+                    dot.classList.add('dot');
+                    dot.dataset.index = i;
+                    dot.addEventListener('click', () => {
+                        stopAutoScroll(); // Stop auto-scroll on manual interaction
+                        scrollToCard(i + numClones); // Scroll to the real card index
+                        startAutoScroll(); // Restart after a brief moment
+                    });
+                    sliderDotsContainer.appendChild(dot);
+                }
+                updateDots(0); // Set initial active dot
+            }
+
+            function updateDots(activeIndex) {
+                const dots = sliderDotsContainer.children;
+                Array.from(dots).forEach((dot, index) => {
+                    dot.classList.toggle('active', index === activeIndex);
+                });
+            }
+
+            createDots(); // Initialize dots
+
+            // --- Mobile Navigation Toggle ---
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const mobileMenu = document.querySelector('.mobile-nav-links');
+            const mobileMenuClose = document.querySelector('.mobile-menu-close');
+            const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+
+            function toggleMobileMenu() {
+                mobileMenu.classList.toggle('active');
+                mobileMenuOverlay.classList.toggle('active');
+                document.body.classList.toggle('no-scroll'); // Optional: Prevent body scrolling
+            }
+
+            hamburgerMenu.addEventListener('click', toggleMobileMenu);
+            mobileMenuClose.addEventListener('click', toggleMobileMenu);
+            mobileMenuOverlay.addEventListener('click', toggleMobileMenu); // Close when clicking outside
+
+            // Prevent body scroll when mobile menu is open
+            const styleSheet = document.createElement('style');
+            styleSheet.innerHTML = `
+                body.no-scroll {
+                    overflow: hidden;
+                }
+            `;
+            document.head.appendChild(styleSheet);
+
+
+            // --- Hot & New "Show More" / "Show Less" ---
+            const hotNewContentWrapper = document.getElementById('hotNewContentWrapper');
+            const toggleHotNewButton = document.getElementById('toggleHotNew');
+
+            toggleHotNewButton.addEventListener('click', () => {
+                hotNewContentWrapper.classList.toggle('expanded');
+                if (hotNewContentWrapper.classList.contains('expanded')) {
+                    toggleHotNewButton.textContent = 'See Less';
+                } else {
+                    toggleHotNewButton.textContent = 'See More';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
